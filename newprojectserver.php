@@ -49,6 +49,8 @@
 				if (!mysqli_query($con,$query)) {
   				die('Error: ' . mysqli_error($con));
 				}
+
+				
   	
   	echo "Your project is created";
   

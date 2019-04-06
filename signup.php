@@ -24,7 +24,7 @@
                 <div class="login-box">   
                 <form method="post" action="signup.php">   
                    <?php include('errors.php'); ?>
-                            <h1 class="signup">Sign Up</h1>
+                            <h1 class="signup">Signup</h1>
                             <input type="text" name="username" placeholder="Username"/>
                             <input type="text" name="email" placeholder="Email"/>
                             <input type="password" name="password_1" placeholder="Password"/>

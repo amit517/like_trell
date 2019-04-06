@@ -22,7 +22,7 @@
            
         <section class="sec">
                 <div class="login-box"> 
-                        <h1 class="signup">Log In</h1>
+                        <h1 class="signup">Login</h1>
                         <form method="post" action="signin.php">
                             <?php include('errors.php'); ?>
                             
@@ -37,7 +37,7 @@
                                 <input type="submit" name="login_user" value="signin"/>
                             
                             <p>
-                                Not yet a member? <a href="register.php">Sign up</a>
+                                Not yet a member? <a href="signup.php">Sign up</a>
                             </p>
                           </form>         
                     </div>
