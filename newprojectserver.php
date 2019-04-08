@@ -5,17 +5,41 @@
 </head>
 <body>
 
+<table>
+	<th>Projct Name</th>
+	<?php 
+	$conn = mysqli_connect("localhost","root","","dashboard");
 
-		<form action="newprojectserver.php" method="post" id="project">
-		
-				
+	if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+  } 
+  $sql = "select projectname from allproject";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+   // output data of each row
+   while($row = $result->fetch_assoc()) {
+    echo "<tr><td>" . $row["projectname"]. "</td></tr>";
+	}
+	echo "</table>";
+	} else { echo "0 results"; }
+	$conn->close();
+	 ?>
+</table>	
+
+	<form action="newprojectserver.php" method="post" id="project">	
 		<input type="text" name="projectname" placeholder="Projct name">
 		<input type="submit" name="psubmit">
+	</form>
+
+	<form action="servargoto.php" method="post" id="goto">	
+		<input type="text" name="gotoproject" placeholder="GoTo project">
+		<input type="submit" name="gsubmit">
 
 	</form>
 
 	<?php 
-	$project_name = "";
+
+	
 	$errors = array(); 
 	if (!empty($_POST['projectname'])){
 			$name =  $_POST['projectname'];
