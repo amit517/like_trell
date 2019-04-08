@@ -17,10 +17,10 @@
   	echo "conneted";
   }
 
-	$query = "SELECT todo,doing,done FROM `amit`";
+	$query = "SELECT todo,doing,done FROM `$project_name`";
 
 	if (!mysqli_query($conn,$query)) {
-  				die('Error: ' . mysqli_error($con));
+  				die('Error: ' . mysqli_error($conn));
 				}
 				$result=mysqli_query($conn,$query);
 	?>

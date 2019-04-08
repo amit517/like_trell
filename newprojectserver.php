@@ -1,10 +1,30 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: signin.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="styledash.css">
 </head>
 <body>
+<div class="content">
 
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) : ?>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    <?php endif ?>
+</div>
+
+<h1 style="text-align: center color =black;">Dashboard</h1>
+<!-- notification message -->
 <table>
 	<th>Projct Name</th>
 	<?php 
@@ -77,9 +97,6 @@
 				if (!mysqli_query($con,$query2)) {
   				die('Error: ' . mysqli_error($con));
 				}
-
-				
-  	
   	echo "Your project is created";
   
 	}
