@@ -46,7 +46,11 @@
 				 done varchar (100),
 				 done_status BOOLEAN)";
 
+	$query2 = "insert into allproject(projectname) VALUE ('$project_name')";
 				if (!mysqli_query($con,$query)) {
+  				die('Error: ' . mysqli_error($con));
+				}
+				if (!mysqli_query($con,$query2)) {
   				die('Error: ' . mysqli_error($con));
 				}
 
