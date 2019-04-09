@@ -20,7 +20,7 @@ $currentuser = $_SESSION['username'];
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    	<p> <a href="signin.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>
 
@@ -110,7 +110,7 @@ $currentuser=mysqli_real_escape_string($con,$currentuser);
 				}
 
   	echo "Your project is created";
-  	
+  	header('location: /web_project/newprojectserver.php');
   
 	}
 	?>
