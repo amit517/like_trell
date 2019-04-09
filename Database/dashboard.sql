@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2019 at 08:49 PM
+-- Generation Time: Apr 09, 2019 at 05:09 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -46,7 +46,7 @@ CREATE TABLE `aasdiasuhd` (
 CREATE TABLE `allproject` (
   `projectname` varchar(100) NOT NULL,
   `id` int(11) NOT NULL,
-  `user` int(11) NOT NULL
+  `user` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,15 +54,25 @@ CREATE TABLE `allproject` (
 --
 
 INSERT INTO `allproject` (`projectname`, `id`, `user`) VALUES
-('amit', 1, 0),
-('testtttt', 2, 0),
-('aasdiasuhd', 3, 0),
-('amitkundu', 4, 0),
-('ausyfgduasyfgdsieaufgh48e7igfheri', 5, 0),
-('iguasiugasiguifusf', 6, 0),
-('kuddus', 7, 0),
-('amittttidsgisdgf', 8, 0),
-('skdbfbsdfsdfs', 9, 0);
+('amit', 1, ''),
+('testtttt', 2, ''),
+('aasdiasuhd', 3, ''),
+('amitkundu', 4, ''),
+('ausyfgduasyfgdsieaufgh48e7igfheri', 5, ''),
+('iguasiugasiguifusf', 6, ''),
+('kuddus', 7, ''),
+('amittttidsgisdgf', 8, ''),
+('skdbfbsdfsdfs', 9, ''),
+('amit555', 10, 'amit'),
+('testing_user', 11, 'amit'),
+('amitasde8fyw8rythoe8rghe', 12, ''),
+('finaltest', 13, 'amit'),
+('finaltest2', 14, 'amit'),
+('askugdakugeuwoefhwoeifh', 15, 'amit'),
+('sdfusdufhsodfpofd', 16, 'amit'),
+('asodihoaifhoeifwefwfwrgwr', 17, 'amit'),
+('sdpfhsdfoisdofi', 18, 'amit'),
+(' amitproject', 19, 'amit');
 
 -- --------------------------------------------------------
 
@@ -76,15 +86,18 @@ CREATE TABLE `amit` (
   `doing` varchar(100) DEFAULT NULL,
   `doing_status` tinyint(1) DEFAULT NULL,
   `done` varchar(100) DEFAULT NULL,
-  `done_status` tinyint(1) DEFAULT NULL
+  `done_status` tinyint(1) DEFAULT NULL,
+  `user` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `amit`
 --
 
-INSERT INTO `amit` (`todo`, `todo_status`, `doing`, `doing_status`, `done`, `done_status`) VALUES
-('Have to complete project', NULL, 'Doing project', NULL, NULL, NULL);
+INSERT INTO `amit` (`todo`, `todo_status`, `doing`, `doing_status`, `done`, `done_status`, `user`) VALUES
+('Have to complete project', NULL, 'Doing project', NULL, NULL, NULL, ''),
+(NULL, NULL, NULL, NULL, NULL, NULL, 'amit'),
+(NULL, NULL, NULL, NULL, NULL, NULL, 'amit12');
 
 -- --------------------------------------------------------
 
@@ -149,10 +162,40 @@ CREATE TABLE `amit80` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `amitasde8fyw8rythoe8rghe`
+--
+
+CREATE TABLE `amitasde8fyw8rythoe8rghe` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `amitkundu`
 --
 
 CREATE TABLE `amitkundu` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `amitproject`
+--
+
+CREATE TABLE `amitproject` (
   `todo` varchar(100) DEFAULT NULL,
   `todo_status` tinyint(1) DEFAULT NULL,
   `doing` varchar(100) DEFAULT NULL,
@@ -179,10 +222,70 @@ CREATE TABLE `amittttidsgisdgf` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `askugdakugeuwoefhwoeifh`
+--
+
+CREATE TABLE `askugdakugeuwoefhwoeifh` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `asodihoaifhoeifwefwfwrgwr`
+--
+
+CREATE TABLE `asodihoaifhoeifwefwfwrgwr` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ausyfgduasyfgdsieaufgh48e7igfheri`
 --
 
 CREATE TABLE `ausyfgduasyfgdsieaufgh48e7igfheri` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `finaltest`
+--
+
+CREATE TABLE `finaltest` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `finaltest2`
+--
+
+CREATE TABLE `finaltest2` (
   `todo` varchar(100) DEFAULT NULL,
   `todo_status` tinyint(1) DEFAULT NULL,
   `doing` varchar(100) DEFAULT NULL,
@@ -243,6 +346,51 @@ CREATE TABLE `love` (
 --
 
 CREATE TABLE `projectname` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `saoguhdaiougfdiguaifugsf`
+--
+
+CREATE TABLE `saoguhdaiougfdiguaifugsf` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sdfusdufhsodfpofd`
+--
+
+CREATE TABLE `sdfusdufhsodfpofd` (
+  `todo` varchar(100) DEFAULT NULL,
+  `todo_status` tinyint(1) DEFAULT NULL,
+  `doing` varchar(100) DEFAULT NULL,
+  `doing_status` tinyint(1) DEFAULT NULL,
+  `done` varchar(100) DEFAULT NULL,
+  `done_status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sdpfhsdfoisdofi`
+--
+
+CREATE TABLE `sdpfhsdfoisdofi` (
   `todo` varchar(100) DEFAULT NULL,
   `todo_status` tinyint(1) DEFAULT NULL,
   `doing` varchar(100) DEFAULT NULL,
@@ -344,7 +492,7 @@ ALTER TABLE `allproject`
 -- AUTO_INCREMENT for table `allproject`
 --
 ALTER TABLE `allproject`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
