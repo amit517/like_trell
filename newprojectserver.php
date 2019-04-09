@@ -1,6 +1,7 @@
 <?php 
   session_start(); 
-
+/*$currentuser = $_SESSION['username'];
+echo $currentuser;*/
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: signin.php');
@@ -58,13 +59,16 @@
 	</form>
 
 	<?php 
-
+	$currentuser = $_SESSION['username'];
+	echo $currentuser;
+	
 	
 	$errors = array(); 
 	if (!empty($_POST['projectname'])){
 			$name =  $_POST['projectname'];
 			$con = mysqli_connect("localhost","root","","dashboard");
 			$project_name = mysqli_real_escape_string($con,$name);
+			$currentuser=mysqli_real_escape_string($con,$currentuser);
 	
 	if (!$con)
  	 {
@@ -82,7 +86,7 @@
 
 	}
 
-  	$query = "CREATE table $project_name
+   	$query = "CREATE table $project_name
 				(todo varchar (100),
 				 todo_status BOOLEAN,
 				 doing varchar (100),
@@ -90,7 +94,8 @@
 				 done varchar (100),
 				 done_status BOOLEAN)";
 
-	$query2 = "insert into allproject(projectname) VALUE ('$project_name')";
+
+	$query2 = "insert into allproject(projectname,user) VALUES ('$project_name','$currentuser')";
 				if (!mysqli_query($con,$query)) {
   				die('Error: ' . mysqli_error($con));
 				}
