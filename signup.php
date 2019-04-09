@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <link rel="stylesheet" type="text/css" href="signup-style.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/signup-style.css">
         <title>Signup to...</title>
     </head>
     <body>
             <nav>
                     <div class="row">
-                        <img src="logo.png" alt="logo" class="logo">
+                        <img src="resources/logo.png" alt="logo" class="logo">
                         <ul class="main-nav">
                             <li><a href="home.php">Home</a></li>
                             <li><a href="signin.php">Log In</a></li>

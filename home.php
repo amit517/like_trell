@@ -2,7 +2,7 @@
 
 <html lang="eng">
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
         <title>Project Manager</title>
 
     </head>
@@ -12,7 +12,7 @@
 
             <nav class="nav">
                 <div class="row">
-                    <img src="logo.png" alt="logo" class="logo">
+                    <img src="resources/logo.png" alt="logo" class="logo">
                     <ul class="main-nav">
                         <li><a href="home.php">Home</a></li>
                         <li><a href="signin.php">Log In</a></li>
