@@ -1,7 +1,7 @@
 <?php 
   session_start(); 
-/*$currentuser = $_SESSION['username'];
-echo $currentuser;*/
+$currentuser = $_SESSION['username'];
+
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: signin.php');
@@ -34,7 +34,13 @@ echo $currentuser;*/
 	if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   } 
-  $sql = "select projectname from allproject";
+
+$con = mysqli_connect("localhost","root","","dashboard");
+$currentuser=mysqli_real_escape_string($con,$currentuser);
+
+
+
+  $sql = "select projectname from allproject where user = '$currentuser'";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
@@ -59,8 +65,8 @@ echo $currentuser;*/
 	</form>
 
 	<?php 
-	$currentuser = $_SESSION['username'];
-	echo $currentuser;
+	
+	
 	
 	
 	$errors = array(); 
@@ -102,7 +108,9 @@ echo $currentuser;*/
 				if (!mysqli_query($con,$query2)) {
   				die('Error: ' . mysqli_error($con));
 				}
+
   	echo "Your project is created";
+  	
   
 	}
 	?>
