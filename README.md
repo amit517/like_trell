@@ -5,7 +5,7 @@ Contains login, home,and todo list.
 
 <br>
 
-##Screenshots
+#Screenshots
 
 <img src="./2.jpg">
 <img src="./1.jpg">
